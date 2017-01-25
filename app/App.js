@@ -27,7 +27,7 @@ function App () {
   }
 
   function initializeCompilerWorker () {
-    compilerWorker = new Worker('/CompilerWorker.js');
+    compilerWorker = new Worker('CompilerWorker.js');
     compilerWorker.addEventListener('message', function (messageEvent) {
       var data = messageEvent.data;
       if (data.action === 'compile' && data.job === lastJob) {
