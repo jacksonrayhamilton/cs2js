@@ -1,8 +1,22 @@
 .cs2js-Compiler {
   display: flex;
+  flex-direction: column;
+}
+
+.cs2js-Compiler-Row {
+  display: flex;
   flex-direction: row;
 }
 
+.cs2js-Compiler-IORow {
+  flex: 1;
+}
+
+.cs2js-Compiler-ErrorRow {
+  color: red;
+}
+
+.cs2js-Compiler-ErrorRow.cs2js-Compiler-ErrorRow-HasError,
 .cs2js-Compiler-IOColumn,
 .cs2js-Compiler-MiddleColumn {
   padding: 10px;

@@ -1,5 +1,6 @@
 'use strict';
 
+var classNames = require('classnames');
 var debounce = require('lodash/debounce');
 
 var React = require('react');
@@ -25,15 +26,22 @@ function Compiler () {
   compiler.render = function () {
     return (
       r('div', {className: 'cs2js-Compiler'},
-        r('div', {className: 'cs2js-Compiler-IOColumn'},
-          r('h2', {}, 'CoffeeScript in'),
-          r('textarea', {className: 'cs2js-Compiler-IO',
-                         onChange: compileLater})),
-        r('div', {className: 'cs2js-Compiler-MiddleColumn'}, '→'),
-        r('div', {className: 'cs2js-Compiler-IOColumn'},
-          r('h2', {}, 'JavaScript out'),
-          r('textarea', {className: 'cs2js-Compiler-IO',
-                         value: compiler.props.compiledJavaScriptCode})))
+        r('div', {className: 'cs2js-Compiler-Row cs2js-Compiler-IORow'},
+          r('div', {className: 'cs2js-Compiler-IOColumn'},
+            r('h2', {}, 'CoffeeScript in'),
+            r('textarea', {className: 'cs2js-Compiler-IO',
+                           onChange: compileLater})),
+          r('div', {className: 'cs2js-Compiler-MiddleColumn'}, '→'),
+          r('div', {className: 'cs2js-Compiler-IOColumn'},
+            r('h2', {}, 'JavaScript out'),
+            r('textarea', {className: 'cs2js-Compiler-IO',
+                           value: compiler.props.compiledJavaScriptCode}))),
+        r('div', {className: classNames(
+          'cs2js-Compiler-Row',
+          'cs2js-Compiler-ErrorRow',
+          {'cs2js-Compiler-ErrorRow-HasError': compiler.props.compilationError}
+        )},
+         compiler.props.compilationError))
     );
   };
 

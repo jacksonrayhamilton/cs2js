@@ -8,6 +8,7 @@
     "auto-reload-brunch": "^2.7.1",
     "autoprefixer": "^6.7.0",
     "brunch": "^2.10.3",
+    "classnames": "^2.2.5",
     "coffee-script": "^1.12.3",
     "css-brunch": "^2.6.1",
     "cssnano": "^3.10.0",

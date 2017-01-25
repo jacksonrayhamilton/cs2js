@@ -31,7 +31,10 @@ function App () {
     compilerWorker.addEventListener('message', function (messageEvent) {
       var data = messageEvent.data;
       if (data.action === 'compile' && data.job === lastJob) {
-        app.setState({compiledCode: data.compiledCode});
+        app.setState({
+          compiledCode: !data.error ? data.compiledCode : app.state.compiledCode,
+          compilationError: data.error ? data.error : undefined
+        });
       }
     });
   }
@@ -47,7 +50,8 @@ function App () {
           r('h1', {className: 'cs2js-App-MainHeading'}, 'CoffeeScript to JavaScript'),
           r(Compiler, {
             onCoffeeScriptCode: compileCode,
-            compiledJavaScriptCode: app.state.compiledCode
+            compiledJavaScriptCode: app.state.compiledCode,
+            compilationError: app.state.compilationError
           })))
     );
   };
