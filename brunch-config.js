@@ -23,7 +23,7 @@ module.exports = {
       joinTo: 'app.css',
       order: {
         before: [
-          'normalize.css',
+          'node_modules/normalize.css/normalize.css',
           'app/global.css'
         ]
       }
