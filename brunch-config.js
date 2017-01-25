@@ -12,16 +12,11 @@ module.exports = {
   files: {
     javascripts: {
       joinTo: {
-        'app.js': [
-          'app/*.js',
-          '!app/CompilerWorker.js',
-          /^node_modules/
-        ],
-        'CompilerWorker.js': [
-          'app/CompilerWorker.js',
-          /^node_modules/,
-          '!node_modules/auto-reload-brunch/vendor/auto-reload.js'
-        ]
+        'app.js': ['node_modules/auto-reload-brunch/vendor/auto-reload.js']
+      },
+      entryPoints: {
+        'app/main.js': 'app.js',
+        'app/CompilerWorker.js': 'CompilerWorker.js'
       }
     },
     stylesheets: {
