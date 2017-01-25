@@ -1,0 +1,17 @@
+.cs2js-App,
+.cs2js-App-Main {
+  height: 100%;
+}
+
+.cs2js-App-Main {
+  display: flex;
+  flex-direction: column;
+}
+
+.cs2js-App-MainHeading {
+  text-align: center;
+}
+
+.cs2js-App-Main .cs2js-Compiler {
+  flex: 1;
+}

@@ -1,0 +1,29 @@
+.cs2js-Compiler {
+  display: flex;
+  flex-direction: row;
+}
+
+.cs2js-Compiler-IOColumn,
+.cs2js-Compiler-MiddleColumn {
+  padding: 10px;
+}
+
+.cs2js-Compiler-MiddleColumn {
+  display: flex;
+  align-items: center;
+  font-size: 64px;
+}
+
+.cs2js-Compiler-IOColumn {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cs2js-Compiler-IO {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}

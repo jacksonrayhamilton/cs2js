@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6.7.0",
+    "brunch": "^2.10.3",
+    "coffee-script": "^1.12.3",
+    "css-brunch": "^2.6.1",
+    "cssnano": "^3.10.0",
+    "lodash": "^4.17.4",
+    "normalize.css": "^5.0.0",
+    "postcss-brunch": "^2.0.5",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "uglify-js-brunch": "^2.0.1"
+  }
+}
